@@ -7,7 +7,7 @@ import { Header } from "./header";
   }) => {
     return (
       <Card className="w-[35%] shadow-md">
-        <CardHeader>
+        <CardHeader >
             <Header label={headerLabel} />
         </CardHeader>
         <CardContent>
