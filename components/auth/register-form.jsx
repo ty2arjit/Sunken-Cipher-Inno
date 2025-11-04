@@ -152,9 +152,9 @@ export const RegisterForm = () => {
           <FormError message={error} />
           <FormSuccess message={success} />
           <div className="w-full flex justify-center">
-            <Button disabled={isPending} type="submit" className="w-[70%]">
+            <button disabled={isPending} type="submit" className="w-[70%] text-lg bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-500 text-black font-semibold shadow-lg shadow-yellow-500/50 hover:shadow-xl hover:shadow-yellow-400/60 hover:from-amber-300 hover:to-orange-400 hover:scale-105 transition duration-300 ease-in-out px-10 py-3 rounded-xl">
               Start Game
-            </Button>
+            </button>
           </div>
         </form>
       </Form>
