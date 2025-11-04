@@ -27,13 +27,13 @@ const HeroContent = () => {
                         className="mb-4 text-8xl leading-none tracking-tight text-white"
                         style={{ letterSpacing: 2, fontFamily: "myFirstFont" }}
                     >
-                        METEOR <br /> MADNESS
+                        SUNKEN <br /> CIPHER
                     </h1>
                     <p
                         className="mb-6 text-2xl font-normal text-white-500 dark:text-gray-300 text-left"
                         style={{ fontFamily: "Roboto" }}
                     >
-                        Let us commence the APS Game of MeteorMadness.
+                        Let us commence the APS Game of SunkenCipher.
                     </p>
                 </motion.div>
 
@@ -43,8 +43,8 @@ const HeroContent = () => {
                     variants={slideInFromLeft(2,2)}
                     onClick={handleRegisterClick}
                     className="py-2 px-[4rem] -ml-6 flex items-center mt-75 justify-center text-center text-white text-2xl cursor-pointer rounded-lg  h-16
-               bg-[#0a0a1a] hover:bg-purple-800 shadow-lg shadow-indigo-900/30
-               border border-transparent hover:border-purple-400 transition duration-300 ease-in-out transform hover:scale-105"
+               bg-cyan-500 hover:bg-cyan-900 shadow-lg shadow-indigo-900/30
+               border border-transparent hover:border-blue-900 transition duration-300 ease-in-out transform hover:scale-105 "
                 >
                     Register
                 </motion.a>
@@ -53,7 +53,7 @@ const HeroContent = () => {
             </div>
 
             <motion.div
-                variants={slideInFromRight(0.8)}
+                variants={slideInFromRight(10000000000000000000000000000000000000000000000000000)}
                 className="w-[40%] h-full  m-auto animate-floating ml-6  "
             >
                 <Image
