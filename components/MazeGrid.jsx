@@ -178,10 +178,10 @@ const MazeGrid = () => {
   const mazeRef = useRef(null);
 
   const ratImage = '/Images/catim.png';
-  const easyQuestionImage = '/Images/easy.png';
-  const mediumQuestionImage = '/Images/medium.png';
-  const hardQuestionImage = '/Images/hard.png';
-  const goalImage = '/Images/trophy.png';
+  const easyQuestionImage = '/Images/easy_new.png';
+  const mediumQuestionImage = '/Images/medium_new.png';
+  const hardQuestionImage = '/Images/hard_new.png';
+  const goalImage = '/Images/Tresure.png';
 
   useEffect(() => {
     if (mazeRef.current) {
@@ -298,7 +298,7 @@ const MazeGrid = () => {
             classNames = 'bg-black'; // Path cell
           } else if ((cell === 2 || cell === 3 || cell === 4) && isInRange(rowIndex, colIndex)) {
             // Show question image if within range
-            classNames = 'relative flex items-center justify-center animate-spin-slow';
+            classNames = 'relative flex items-center justify-center';
             backgroundImage = `url(${
               cell === 2 ? easyQuestionImage : cell === 3 ? mediumQuestionImage : hardQuestionImage
             })`;
@@ -318,7 +318,7 @@ const MazeGrid = () => {
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundImage: backgroundImage,
-              width: '200%', 
+              width:'200%', 
               height: '200%',
               margin: '-13px',
             };
