@@ -11,7 +11,7 @@ const Sidebar = () => {
   const formatTime = (seconds) => {
     const minutes = Math.floor(seconds / 60);
     const secs = seconds % 60;
-    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    return `${minutes}:${ secs < 10 ? '0' : ''}${secs}`;
   };
   
 
@@ -20,10 +20,10 @@ const Sidebar = () => {
     setIsGameOver(true);
   };
 
-  const easyQuestionImage = '/Images/easy.png';
-  const mediumQuestionImage = '/Images/medium.png';
-  const hardQuestionImage = '/Images/hard.png';
-  const goalImage = '/Images/trophy.png';
+  const easyQuestionImage = '/Images/easy_new.png';
+  const mediumQuestionImage = '/Images/med_new.png';
+  const hardQuestionImage = '/Images/hard_new.png';
+  const goalImage = '/Images/Treasure.png';
   // useEffect(() => {
   //   const fetchLeaderboard = async () => {
   //     try {
@@ -39,7 +39,7 @@ const Sidebar = () => {
   // }, []);
 
   return (
-    <div className="text-white font-bold pt-6 flex flex-col justify-between  h-full">
+    <div className="text-white font-bold pt-6 flex flex-col justify-between h-full relative z-50">
 
       <div className="flex flex-col items-center mb-8">
         <div className="mb-4 text-xl flex items-center">
@@ -100,7 +100,7 @@ const Sidebar = () => {
         border: "1px solid rgba(255, 255, 255, 0.2)"
       }}
     >
-      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 opacity-20 blur-md -z-10"></div>
+      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-400 via-blue-500 to-cyan-950 opacity-20 blur-md -z-10"></div>
       <Image
         src={category.image}
         alt={`${category.label} question`}
@@ -126,7 +126,7 @@ const Sidebar = () => {
         <button
           onClick={end}
           variant="secondary"
-          className="w-[80%] py-2 text-white font-semibold bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-xl transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:from-purple-600 hover:to-pink-600 flex items-center justify-center space-x-2"
+          className="w-[80%] py-2 text-white font-semibold bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-500 shadow-lg shadow-yellow-500/50 hover:shadow-xl hover:shadow-yellow-400/60 hover:from-amber-300 hover:to-orange-400 flex items-center justify-center space-x-2 rounded-xl"
         >
           <span>End Game</span>
           <MdExitToApp className="text-xl" />
