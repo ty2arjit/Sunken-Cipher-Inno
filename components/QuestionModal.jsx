@@ -21,7 +21,7 @@ const QuestionModal = () => {
     return null; 
   }
 
-  const handleOptionClick = (option) => {
+  const handleOptionClick = ( option ) => {
     setSelectedAnswer(option);
     const correct = option === currentQuestion.correctAnswer;
     setIsCorrect(correct);
@@ -30,17 +30,15 @@ const QuestionModal = () => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-[30]">
-      <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl shadow-2xl w-[90%] max-w-4xl transform transition-all duration-500 ease-in-out scale-105">
-        <h2 className="text-4xl font-bold text-purple-400 mb-6 text-center animate-pulse">{currentQuestion.heading}</h2>
+      <div className="bg-slate-900 p-8 rounded-3xl shadow-2xl w-[90%] max-w-4xl transform transition-all duration-500 ease-in-out scale-105">
+        <h2 className="text-4xl font-bold text-cyan-400 mb-6 text-center animate-pulse">{currentQuestion.heading}</h2>
         <p className="text-lg text-white font-medium mb-6 text-center leading-relaxed">
           {currentQuestion.question}
         </p>
 
         <div className="flex flex-col space-y-4">
           {currentQuestion.options.map((option, index) => {
-            let optionStyle = `bg-gradient-to-r from-[#2b1b4d] to-[#3a2d6f] text-white 
-                               hover:from-[#4c348d] hover:to-[#6b5da7] transition-all duration-300 
-                               shadow-lg hover:shadow-indigo-700/70 transform hover:scale-105`;
+            let optionStyle = `bg-gradient-to-r from-cyan-400 via-lime-400 to-cyan-400 text-black font-bold rounded-lg bg-[length:200%_auto] bg-[position:0%_auto] transition-[background-position] duration-500 ease-in-outhover:shadow-xl hover:shadow-yellow-500/50 hover:from-amber-300 hover:to-orange-500 hover:scale-105 duration-300 ease-in-out`;
 
             if (selectedAnswer) {
               if (option === currentQuestion.correctAnswer && isCorrect) {
