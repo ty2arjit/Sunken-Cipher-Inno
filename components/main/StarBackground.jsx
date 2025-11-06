@@ -31,7 +31,7 @@ const StarBackground = (props) => {
                 transparent
                 color="$fff"
                 size={0.002}
-                sizeAttenuation={true}
+                sizeAttenuation = {true}
                 dethWrite={false}
             />
         </Points>
