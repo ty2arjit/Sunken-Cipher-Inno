@@ -179,9 +179,9 @@ const MazeGrid = () => {
 
   const ratImage = '/Images/catim.png';
   const easyQuestionImage = '/Images/easy_new.png';
-  const mediumQuestionImage = '/Images/medium_new.png';
+  const mediumQuestionImage = '/Images/Med_new.png';
   const hardQuestionImage = '/Images/hard_new.png';
-  const goalImage = '/Images/Tresure.png';
+  const goalImage = '/Images/Treasure.png';
 
   useEffect(() => {
     if (mazeRef.current) {
@@ -277,7 +277,7 @@ const MazeGrid = () => {
           let cellStyle = {};
 
           if (ratPosition.row === rowIndex && ratPosition.col === colIndex) {
-            classNames = 'relative flex items-center justify-center';
+            classNames = 'relative flex items-center justify-center transition duration-300 ease-out floating parallax';
             backgroundImage = `url(${ratImage})`;
             cellStyle = {
               backgroundSize: 'cover',
@@ -288,17 +288,17 @@ const MazeGrid = () => {
               margin: '-18px',
             };
           } else if (cell === 1) {
-            classNames = 'bg-gradient-to-r from-cyan-900 to-blue-700 shadow-2xl border-2 border-cyan-400 transform scale-105 hover:scale-110 transition duration-300 ease-out floating parallax';
+            classNames = 'bg-gradient-to-r from-green-900 to-blue-700 shadow-2xl border-2 border-cyan-400 transform scale-105 hover:scale-110 transition duration-300 ease-out floating parallax';
             cellStyle = {
               boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.5), inset 0px -4px 12px rgba(0, 0, 0, 0.3), inset 0px 4px 8px rgba(255, 255, 255, 0.2)',
-              borderRadius: '12px',
+              borderRadius: '25px',
               backgroundImage: 'radial-gradient(circle at center, rgba(0, 255, 255, 0.3), rgba(0, 0, 128, 0.8))',
             };
           } else if (cell === 0) {
-            classNames = 'bg-black'; // Path cell
+            //classNames = 'bg-black'; // Path cell
           } else if ((cell === 2 || cell === 3 || cell === 4) && isInRange(rowIndex, colIndex)) {
             // Show question image if within range
-            classNames = 'relative flex items-center justify-center';
+            classNames = 'relative flex items-center justify-center transition duration-300 ease-out floating parallax';
             backgroundImage = `url(${
               cell === 2 ? easyQuestionImage : cell === 3 ? mediumQuestionImage : hardQuestionImage
             })`;
@@ -312,15 +312,16 @@ const MazeGrid = () => {
             };
           } else if (cell === 5) {
             // Destination cell (exit)
-            classNames = 'relative flex items-center justify-center';
+            classNames = 'relative flex items-center justify-center transition duration-300 ease-out floating parallax';
             backgroundImage = `url(${goalImage})`;
             cellStyle = {
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundImage: backgroundImage,
               width:'200%', 
-              height: '200%',
+              height: '300%',
               margin: '-13px',
+              
             };
           }
 
