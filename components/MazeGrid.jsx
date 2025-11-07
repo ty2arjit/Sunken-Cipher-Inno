@@ -177,7 +177,7 @@ const MazeGrid = () => {
   const { ratPosition, mazeLayout, handleMove, getQuestion, isQuestionModalOpen, numRows, numCols } = useContext(GameContext);
   const mazeRef = useRef(null);
 
-  const ratImage = '/Images/catim.png';
+  const ratImage = '/Images/Diver.png';
   const easyQuestionImage = '/Images/easy_new.png';
   const mediumQuestionImage = '/Images/Med_new.png';
   const hardQuestionImage = '/Images/hard_new.png';
