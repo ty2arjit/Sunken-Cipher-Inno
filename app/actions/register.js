@@ -38,7 +38,7 @@ export const register = async (values) => {
       return { error: "Sign-in failed!" };
     }
 
-  } catch (error) {
+  } catch ( error ) {
     console.error("Sign-in error:", error);
     return { error: "Something went wrong during sign-in!" };
   }
