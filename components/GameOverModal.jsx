@@ -3,10 +3,15 @@ import { GameContext } from '@/Context/GameContext';
 import { useSession } from "next-auth/react";
 
 const GameOverModal = () => {
-  const { isGameOver, score, timeLeft, endGame, showBackButton, setShowBackButton, setIsGameOver } = useContext(GameContext);
+  const { isGameOver, score, timeLeft, endGame, showBackButton, setShowBackButton, setIsGameOver, easycnt, mediumcnt, hardcnt } = useContext(GameContext);
   const { data: session } = useSession();
   const userName = session?.user?.name || "Player";
 
+  const easyScore = Math.floor(parseInt(easycnt)/3 );
+  const mediumScore = Math.floor(parseInt(mediumcnt)/2);
+  const hardScore = parseInt(hardcnt);
+  
+  const finalScore = easyScore + mediumScore + hardScore;
   if (!isGameOver) {
     return null;
   }
@@ -37,6 +42,10 @@ const GameOverModal = () => {
 
         <p className="mb-4 text-2xl text-white font-semibold text-center">
           Your Score: <span className="text-yellow-400">{score}</span>
+        </p>
+
+        <p className="mb-4 text-2xl text-white font-semibold text-center">
+          Pearls Collected: <span className="text-yellow-400">{finalScore}</span>
         </p>
 
         <p className="mb-4 text-2xl text-white font-semibold text-center">
