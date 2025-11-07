@@ -180,7 +180,7 @@ const MazeGrid = () => {
   const ratImage = '/Images/Diver.png';
   const easyQuestionImage = '/Images/easy_new.png';
   const mediumQuestionImage = '/Images/Med_new.png';
-  const hardQuestionImage = '/Images/hard_new.png';
+  const hardQuestionImage = '/Images/Hard_new.png';
   const goalImage = '/Images/Treasure.png';
 
   useEffect(() => {
