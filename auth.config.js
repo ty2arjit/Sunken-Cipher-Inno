@@ -6,7 +6,7 @@ import { getUserByEmail } from "@/data/user";
 export default {
     providers: [
       Credentials({
-        async authorize(credentials) {
+        async authorize( credentials ) {
           if (!credentials || !credentials.email) {
             throw new Error("Email is required");
           }
