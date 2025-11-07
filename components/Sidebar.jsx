@@ -46,7 +46,7 @@ const Sidebar = () => {
             <span key={index} className="mr-1" style = {{marginBottom: '4px'}}>
               <Image 
               alt="oxygen_tank"
-              src = {"/Images/oxygen_tank.png"}
+              src = {"/Images/Oxygen_tank.png"}
               width={60}
               height={60}
               ></Image>
