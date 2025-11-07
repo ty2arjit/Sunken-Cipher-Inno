@@ -21,9 +21,10 @@ const Sidebar = () => {
   };
 
   const easyQuestionImage = "/Images/easy_new.png";
-  const mediumQuestionImage = "/Images/med_new.png";
-  const hardQuestionImage = "/Images/hard_new.png";
+  const mediumQuestionImage = "/Images/Med_new.png";
+  const hardQuestionImage = "/Images/Hard_new.png";
   const goalImage = "/Images/Treasure.png";
+  const oxygen_tank = "/Images/Oxygen_Tank.png";
   // useEffect(() => {
   //   const fetchLeaderboard = async () => {
   //     try {
@@ -46,7 +47,7 @@ const Sidebar = () => {
             <span key={index} className="mr-1" style = {{marginBottom: '4px'}}>
               <Image 
               alt="oxygen_tank"
-              src = {"/Images/Oxygen_tank.png"}
+              src = {oxygen_tank}
               width={60}
               height={60}
               ></Image>
