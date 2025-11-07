@@ -68,7 +68,7 @@ export const RegisterForm = () => {
                       {...field}
                       disabled={isPending}
                       autoComplete="off"
-                      placeholder="Suman Dalai"
+                      placeholder="Arun Kumar"
                     />
                   </FormControl>
                   <FormMessage />
@@ -86,7 +86,7 @@ export const RegisterForm = () => {
                       {...field}
                       disabled={isPending}
                       autoComplete="off"
-                      placeholder="suman@gmail.com"
+                      placeholder="sumandalai@gmail.com"
                       type="email"
                     />
                   </FormControl>
@@ -105,7 +105,7 @@ export const RegisterForm = () => {
                       {...field}
                       disabled={isPending}
                       autoComplete="off"
-                      placeholder="7815050370"
+                      placeholder="7815050372"
                     />
                   </FormControl>
                   <FormMessage />
@@ -123,7 +123,7 @@ export const RegisterForm = () => {
                       {...field}
                       disabled={isPending}
                       autoComplete="off"
-                      placeholder="122CS0068"
+                      placeholder="123BT0802"
                     />
                   </FormControl>
                   <FormMessage />
