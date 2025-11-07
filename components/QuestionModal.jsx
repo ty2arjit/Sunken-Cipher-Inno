@@ -5,7 +5,7 @@ const QuestionModal = () => {
   const {
     isQuestionModalOpen,
     currentQuestion,
-    handleAnswerSubmission,
+    handleAnswerSubmission
   } = useContext(GameContext);
 
   const [selectedAnswer, setSelectedAnswer] = useState(null);
