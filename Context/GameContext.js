@@ -5,6 +5,7 @@ import { signOut } from 'next-auth/react';
 import axios from 'axios';
 export const GameContext = createContext();
 import { questions } from '@/data/questions';
+import { set } from 'zod';
 
 export const GameProvider = ({ children }) => {
   let mazeMatrix = [
@@ -40,6 +41,9 @@ export const GameProvider = ({ children }) => {
   const [ratPosition, setRatPosition] = useState({ row: 5, col: 0 });
   const [lifelines, setLifelines] = useState(3);
   const [score, setScore] = useState(0);
+  const [easycnt, setEasycnt] = useState(0);
+  const [mediumcnt, setMediumcnt] = useState(0);
+  const [hardcnt, setHardcnt] = useState(0);
   const [timeLeft, setTimeLeft] = useState(600); // 10 minutes
   const [isGameOver, setIsGameOver] = useState(false);
   const [answeredQuestions, setAnsweredQuestions] = useState(new Set());
@@ -94,14 +98,20 @@ export const GameProvider = ({ children }) => {
   };
   
   
-
+  
 
    const getQuestion = (difficulty) => {
     setdiff(difficulty);
     let questionSet;
-    if (difficulty === 2) questionSet = questions.easy;
-    else if (difficulty === 3) questionSet = questions.medium;
-    else if (difficulty === 4) questionSet = questions.hard;
+    if (difficulty === 2) {
+      questionSet = questions.easy;
+    }
+    else if (difficulty === 3) {
+      questionSet = questions.medium;
+    }
+    else if (difficulty === 4) {
+      questionSet = questions.hard;
+    }
     
 
     const unansweredQuestions = questionSet.filter(q => !answeredQuestions.has(q.id));
@@ -115,6 +125,18 @@ export const GameProvider = ({ children }) => {
   const handleAnswerSubmission = (selectedAnswer) => {
     if (selectedAnswer === currentQuestion.correctAnswer) {
       setScore(score + (diff-1)*10); 
+      if ( diff == 2) {
+        setEasycnt(easycnt + 1);
+      }
+      if ( diff == 3) {
+        setMediumcnt(mediumcnt + 1);
+      }
+      if( diff == 4) {
+        setHardcnt(hardcnt + 1);
+      }
+      if( diff == 5) {
+        setHardcnt(hardcnt + 3);
+      }
       if (correctSound) correctSound.play();
     } else {
       setLifelines(lifelines - 1); 
@@ -188,6 +210,12 @@ export const GameProvider = ({ children }) => {
     ratPosition,
     lifelines,
     score,
+    easycnt,
+    setEasycnt,
+    mediumcnt,
+    setMediumcnt,
+    hardcnt,
+    setHardcnt,
     timeLeft,
     isGameOver,
     setIsGameOver,
