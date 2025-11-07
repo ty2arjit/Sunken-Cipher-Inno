@@ -59,7 +59,7 @@ const Sidebar = () => {
             alt="Clock"
             width={200}
             height={200}
-            className=" relative -top-6 left-10 mr-2"
+            className=" relative -top-6 left-10 mr-2 z-50"
           ></Image>
           <div className="text-xl flex flex-col space-y-2 relative top-7 -left-9 items-center justify-center p-2 w-full">
             <span
