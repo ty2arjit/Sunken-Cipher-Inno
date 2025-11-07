@@ -11,7 +11,7 @@ export default async function Home() {
     <div className="text-2xl font-semibold bg-gradient-to-r from-blue-100 via-cyan-300 to-blue-200 text-transparent bg-clip-text text-white" 
     style = {{ marginTop: '200px' }}
     >
-      Made by APS with <span style={{color: "red"}}>❤</span>
+      Made with <span style={{color: "red"}}>❤</span> by APS
     </div>
   </div>
   <div className="absolute inset-0 rounded-md bg-gradient-to-r from-blue-800 via-purple-800 to-pink-800 opacity-25 blur-lg"></div>
