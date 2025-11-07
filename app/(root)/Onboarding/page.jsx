@@ -21,7 +21,7 @@ const Onboarding = () => {
             <div className="flex flex-row items-center bg-black">
               <StarsCanvas/>
                 <div className="w-[80%] h-screen flex items-center justify-center ">
-                    <div className="h-[594px] w-[945px]">
+                    <div className="h-[800px] w-[1100px]">
                        <MazeGrid />
                     </div>
                 </div>
