@@ -68,7 +68,7 @@ export const RegisterForm = () => {
                       {...field}
                       disabled={isPending}
                       autoComplete="off"
-                      placeholder="Sunil Manohar Gavaskar"
+                      placeholder="Suman Dalai"
                     />
                   </FormControl>
                   <FormMessage />
@@ -140,7 +140,7 @@ export const RegisterForm = () => {
                     <Input
                       {...field}
                       disabled={isPending}
-                      autoComplete="off"
+                      autoComplete="on"
                       placeholder="National Institute of Technology ,Rourkela"
                     />
                   </FormControl>
