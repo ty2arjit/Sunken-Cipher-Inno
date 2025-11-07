@@ -26,14 +26,14 @@ const GameOverModal = () => {
   }
 
   const resume = () => {
-    setIsGameOver(false);
-    setShowBackButton(false);
+    setIsGameOver( false );
+    setShowBackButton( false );
   }
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-[30]">
-      <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl shadow-2xl max-w-lg w-full transform transition-all duration-500 ease-in-out scale-105 border border-purple-600">
-        <h2 className="text-4xl font-bold text-purple-400 mb-6 text-center animate-pulse">Game Over</h2>
+      <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl shadow-2xl max-w-lg w-full transform transition-all duration-500 ease-in-out scale-105 border border-blue-600">
+        <h2 className="text-4xl font-bold text-cyan-400 mb-6 text-center animate-pulse">Game Over</h2>
 
         <p className="mb-4 text-2xl text-white font-semibold text-center">
           Your Score: <span className="text-yellow-400">{score}</span>
@@ -58,7 +58,7 @@ const GameOverModal = () => {
             </button>
           )}
           <button
-            className={`${showBackButton ? 'w-full' : 'w-full'} py-3 px-6 rounded-lg bg-gradient-to-r from-purple-700 to-pink-500 text-white font-semibold shadow-lg hover:from-purple-800 hover:to-pink-600 transition-all duration-300 transform hover:scale-105`}
+            className={`${showBackButton ? 'w-full' : 'w-full'} w-full py-3 px-6 rounded-lg bg-gradient-to-r from-blue-600 to-blue-400 text-white font-semibold shadow-lg hover:from-blue-700 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 mr-2`}
             onClick={() => endGame(mytime)}
           >
             End Game
