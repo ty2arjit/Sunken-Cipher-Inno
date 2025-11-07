@@ -8,7 +8,7 @@ export default async function Home() {
     </div>
     <div className="w-full text-center text-white p-6 mt-8 relative z-[10]">
   <div className="flex flex-col items-center space-y-2">
-    <div className="text-2xl font-semibold bg-gradient-to-r from-blue-100 via-cyan-300 to-blue-200 text-transparent bg-clip-text text-yellow-500" 
+    <div className="text-2xl font-semibold bg-gradient-to-r from-blue-100 via-cyan-300 to-blue-200 text-transparent bg-clip-text text-white" 
     style = {{ marginTop: '200px' }}
     >
       Made by APS with <span style={{color: "red"}}>❤</span>
