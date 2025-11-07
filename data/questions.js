@@ -589,18 +589,7 @@ export const questions = {
       ],
       correctAnswer: "5 minute"
     },
-    {
-      id: 6,
-      heading: "Pearl Diving Rate",
-      question: "If 5 identical pearl divers take 5 minutes to find 5 pearls, how long will 100 divers take to find 100 pearls?",
-      options: [
-        "5min",
-        "1min",
-        "100min",
-        "10min"
-      ],
-      correctAnswer: "5 min"
-    },
+
     {
       id: 7,
       heading: "Sunken Treasure Interest",
