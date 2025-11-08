@@ -85,18 +85,6 @@ export const questions = {
       correctAnswer: "Anna"
     },
     {
-      id: 8,
-      heading: "Ship's Chronometer",
-      question: "A ship's chronometer (a clock) shows the time as 12:15. What is the angle between the hour and minute hands?",
-      options: [
-        "90°",
-        "97.5°",
-        "82.5⁰",
-        "100⁰"
-      ],
-      correctAnswer: "97.5"
-    },
-    {
       id: 9,
       heading: "Pressure Sequence",
       question: "The Sunken Cipher reveals a pressure sequence: 2, 0, 5, 8, 26, 63, 170, …\nWhich of the following pressure readings comes next in the series?",
