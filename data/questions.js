@@ -874,11 +874,11 @@ export const questions = {
       question: "A ship's chronometer shows the time as 12:15. What is the angle between the hour and minute hands?",
       options: [
         "90°",
-        "97.5°",
+        "87.5°",
         "82.5°",
-        "100°"
+        "80°"
       ],
-      correctAnswer: "97.5°"
+      correctAnswer: "82.5°"
     },
     {
       id: 7,
